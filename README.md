@@ -6,4 +6,3 @@
 
 ## Features
 * jQuery used to implement Drag and Drop for List and Card objects
-* 
