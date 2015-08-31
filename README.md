@@ -9,4 +9,4 @@
 
 ## Preview
  [boardShow]: ./app/assets/images/frello.png
- [boardShowlink][boardShow]
+ ![boardShow]
