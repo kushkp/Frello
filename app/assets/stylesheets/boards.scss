@@ -1,0 +1,49 @@
+// Place all the styles related to the boards controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.index-item {
+  width: 200px;
+  border-radius: 5px;
+  margin: 15px;
+
+  &:hover .delete_board {
+    display: block;
+  }
+}
+
+.index-item.list-group-item {
+  display: inline-block;
+  background-color: aliceblue;
+  overflow: hidden;
+}
+
+.delete_board.btn {
+  display: none;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  background-color: #C33F58;
+}
+
+.add-form {
+  margin:15px;
+  background-color: forestgreen;
+  color: white;
+}
+
+.new_board {
+  margin: 15px;
+  padding: 20px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  background-color: lightgray;
+}
+
+.submit-button {
+  margin-top: 5px;
+}
+
+.board-body {
+  display: flex;
+}

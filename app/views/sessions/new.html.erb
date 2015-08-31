@@ -1,0 +1,45 @@
+<div class="login-page-wrapper">
+
+<form action="<%=session_url%>" method="post" class="new-user-form">
+  <h1 class="login-header"> Sign In </h1>
+  <%= render partial: "shared/form" %>
+
+  <button id="login-button" class="btn btn-primary">Sign In</button>
+</form>
+
+  <button class="guest-login btn btn-secondary" id="guest-login">Guest Login</button>
+
+</div>
+
+<script>
+$('#guest-login').click(
+  function() {
+
+   $email = $('#email');
+   $password = $('#password');
+   $submitButton = $('#login-button');
+
+   $email.val('');
+   $password.val('');
+
+   slowtype($email, 'Guest@guest.com', function(){
+     slowtype($password, 'testtest', function() {
+       $submitButton.click();
+     });
+   });
+ }
+);
+
+function slowtype($el, word, callback) {
+
+ var typing = setInterval(function(){
+   $el.val( $el.val() + word.slice(0,1) );
+   word = word.substr(1);
+
+   if (!word){
+     clearInterval(typing);
+     callback();
+   }
+ }, 60);
+}
+</script>

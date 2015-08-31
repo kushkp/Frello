@@ -1,0 +1,29 @@
+<nav class="navbar navbar-default navbar-html">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+
+      <a class="navbar-brand" href="#">
+        Frello
+      </a>
+
+      <button type="button" class="navbar-toggle collapsed"
+              data-toggle="collapse"
+              data-target="#collapse-menu"
+              aria-expanded="false">
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="collapse-menu">
+      <ul class="nav navbar-nav pull-right">
+        <li><a href="#"><%= current_user.email %></a></li>
+        <li><%= link_to "Sign Out", session_url, method: :delete %></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-left">
+        <li><a href="#">Boards</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>

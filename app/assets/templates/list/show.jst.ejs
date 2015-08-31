@@ -1,0 +1,28 @@
+<div class="list" data-id="<%= list.id %>">
+  <h5>
+    <%= list.escape("title") %>
+  </h5>
+
+  <button type="button"
+          class="delete_list btn
+          data-id="<%= list.id %>"
+          ><span class="glyphicon glyphicon-remove"></span></button>
+
+  <br>
+
+  <div class="cards"></div>
+  <br>
+
+
+  <form class="new_card input-group new-card-form">
+    <label for="card_title">New Card</label>
+    <input type="text"
+           name="card[title]"
+           id="card_title"
+           class="form-control"
+           placeholder="Card title">
+
+    <button class="btn btn-primary form-control new-card-btn">New Card</button>
+  </form>
+
+</div>

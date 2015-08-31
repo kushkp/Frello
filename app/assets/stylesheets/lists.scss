@@ -1,0 +1,81 @@
+div .lists{
+  height: 410px;
+  display: flex;
+}
+//
+//
+div .ui-sortable-handle {
+  float: left;
+}
+
+div .list {
+  position: relative;
+  width: 300px;
+  display: inline-block;
+  border: thin solid lightgray;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: lightgray;
+
+  h5 {
+    padding-left: 10px;
+  }
+}
+
+h4 {
+  margin-top: 100px;
+  padding-left: 3px;
+}
+
+.new_list_form{
+  display: inline-block;
+  position: absolute;
+  // height: 200px;
+  width: 300px;
+  border: thin solid lightgray;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: lightgray;
+  padding: 10px;
+}
+//
+.lists:after {
+  clear: both;
+  display: block;
+  content: "";
+}
+
+.delete_list.btn {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  background-color: #C33F58;
+}
+
+form input#card_title {
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
+form.new-card-form {
+  // width: 98%;
+  margin: 5px;
+}
+
+button.new-card-btn.btn.btn-primary {
+  border-radius: 4px;
+}
+
+input#list_title {
+  width:80%;
+}
+
+button.add-list-btn {
+  margin-left: 10px;
+  color: white;
+  background-color: forestgreen;
+}
+
+form.new_list {
+  display: block;
+}

@@ -1,0 +1,44 @@
+// Place all the styles related to the sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+form.new-user-form {
+  position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    border: thin solid lightgray;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.5);
+    padding: 20px 20px 70px 20px;
+
+}
+
+.login-page-wrapper {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-image: url('https://images.unsplash.com/photo-1429032021766-c6a53949594f?q=80&fm=jpg&s=e86a69acddf29299852f1e99baf38918');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.guest-login{
+  position: absolute;
+  left: 50%;
+  bottom: 37.5%;
+  transform: translate(-50%,-50%);
+  border: thin solid lightgray;
+  border-radius: 10px;
+  padding: 20px;
+  width: 192px;
+}
+
+#login-button {
+  margin-top:10px;
+}

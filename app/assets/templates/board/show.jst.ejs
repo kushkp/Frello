@@ -1,0 +1,25 @@
+<h2 class="title"><%= board.escape("title") %></h2>
+
+
+<div class="board-body">
+<div class="lists">
+</div>
+
+
+<div class="new_list_form">
+<h5>New List</h5>
+  <form class="new_list input-group">
+
+    <input type="text"
+           class="form-control"
+           name="list[title]"
+           id="list_title"
+           placeholder="List title"
+           data-id="<%= board.id %>">
+
+    <button class="submit_new_list btn add-list-btn">
+      <span class="glyphicon glyphicon-plus"></span>
+    </button>
+  </form>
+</div>
+</div>

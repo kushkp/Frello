@@ -1,0 +1,9 @@
+<%=auth_token%>
+
+<label>Email
+<input type="text" id="email" name="user[email]" class="form-control" value="<%= @user.email if @user%>">
+</label>
+
+<label>Password
+<input type="password" id="password" name="user[password]" class="form-control" value="<%= @user.password if @user%>">
+</label>

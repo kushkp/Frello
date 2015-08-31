@@ -1,0 +1,31 @@
+button.delete_card.btn {
+  display: none;
+  position: absolute;
+top: 2px;
+right: 2px;
+background-color: #C33F58;
+}
+
+.cards {
+  min-height: 38px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover > .delete_card {
+  display: inline-block;
+}
+
+.card {
+  margin: 5px;
+  border-radius: 3px;
+  background-color: white;
+  min-height: 38px;
+padding-left: 15px;
+padding-top: 8px;
+position: relative;
+
+    &:hover {
+      display: block;
+    }
+}

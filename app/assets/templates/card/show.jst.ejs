@@ -1,0 +1,8 @@
+<div class="card" data-id="<%= card.id %>">
+  <%= card.escape("title") %>
+
+  <button type="button"
+          class="delete_card btn"
+          data-id="<%= card.id %>"
+          ><span class="glyphicon glyphicon-remove"></span></button>
+</div>
