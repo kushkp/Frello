@@ -1,5 +1,4 @@
 div .lists{
-  height: 410px;
   display: -webkit-box !important;
   display: flex;
 }
@@ -10,6 +9,7 @@ div .ui-sortable-handle {
 }
 
 .list {
+  height: 100%;
   position: relative;
   width: 300px;
   display: inline-block;
@@ -20,6 +20,10 @@ div .ui-sortable-handle {
 
   h5 {
     padding-left: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+    margin: 10px 55px 10px 8px;
+    font-weight: bold;
   }
 }
 
