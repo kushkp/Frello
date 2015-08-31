@@ -22,7 +22,11 @@ Trello.Views.BoardShow = Backbone.CompositeView.extend({
 
   onRender: function () {
     this.$('.lists').sortable({
+      start: function(event, ui) {
+        ui.item.toggleClass('dragged');
+      },
       stop: function(event, ui){
+        ui.item.toggleClass('dragged');
         this.saveOrder();
       }.bind(this)
     });
@@ -54,7 +58,7 @@ Trello.Views.BoardShow = Backbone.CompositeView.extend({
     e.preventDefault();
     var formData = $(e.currentTarget).serializeJSON();
     formData.list.board_id = this.model.id;
-    formData.list.ord = this.model.lists().length
+    formData.list.ord = this.model.lists().length;
     var new_list = new Trello.Models.List();
     new_list.save( formData, {
       success: function() {

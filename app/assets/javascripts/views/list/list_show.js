@@ -26,8 +26,12 @@ Trello.Views.ListShow = Backbone.CompositeView.extend({
   onRender: function () {
     this.$('.cards').sortable({
       connectWith: '.cards',
+      start: function(event, ui) {
+        ui.item.toggleClass('dragged');
+      },
       stop: function (event, ui){
         if (!ui.sender) {
+          ui.item.toggleClass('dragged');
           this.saveOrder(ui);
         }
       }.bind(this),
