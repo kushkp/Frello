@@ -1,5 +1,13 @@
 Trello.Views.CardShow = Backbone.View.extend({
   template: JST["card/show"],
+  className: 'card',
+
+  attributes: function() {
+      return {
+        "data-id": this.model.id
+      };
+
+  },
 
   events: {
     "click .delete_card" : "deleteCard"

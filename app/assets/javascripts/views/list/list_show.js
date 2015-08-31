@@ -1,12 +1,17 @@
 Trello.Views.ListShow = Backbone.CompositeView.extend({
   template: JST["list/show"],
+  className: 'list',
+
+  attributes: function() {
+    return {
+      "data-id": this.model.id
+    };
+  },
 
   events: {
     "click .delete_list" : "deleteList",
     "submit .new_card" : "newCard"
   },
-
-  className: "list-container",
 
   initialize: function() {
     this.listenTo(this.model, "sync", this.render);
@@ -61,15 +66,15 @@ Trello.Views.ListShow = Backbone.CompositeView.extend({
 
     for(var i = 0; i < cardItems.length; i++) {
       var cardId = $(cardItems[i]).data("id");
-      var currentCard = this.model.cards().getOrFetch(cardId)
-      currentCard.save({"card" : {"ord": i}})
+      var currentCard = this.model.cards().getOrFetch(cardId);
+      currentCard.save({"card" : {"ord": i}});
     }
   },
 
   saveNewList: function (ui) {
-    var cardId = ui.item.find('.card').data('id')
+    var cardId = ui.item.data('id');
     var currentCard = new Trello.Models.Card({ id: cardId });
-    var newListId = this.model.id
+    var newListId = this.model.id;
     currentCard.fetch({
       success: function (model) {
         model.save({"card": {'list_id': newListId}});
@@ -82,7 +87,7 @@ Trello.Views.ListShow = Backbone.CompositeView.extend({
     e.preventDefault();
     var formData = $(e.currentTarget).serializeJSON();
     formData.card.list_id = this.model.id;
-    formData.card.ord = this.model.cards().length
+    formData.card.ord = this.model.cards().length;
     var new_card = new Trello.Models.Card();
     new_card.save( formData, {
       success: function() {

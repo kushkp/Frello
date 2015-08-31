@@ -1,6 +1,7 @@
 div .lists{
   height: 410px;
-  // display: flex;
+  display: -webkit-box !important;
+  display: flex;
 }
 //
 //
@@ -8,11 +9,11 @@ div .ui-sortable-handle {
   float: left;
 }
 
-div .list {
+.list {
   position: relative;
   width: 300px;
   display: inline-block;
-  border: thin solid lightgray;
+  // border: thin solid lightgray;
   margin: 10px;
   border-radius: 10px;
   background-color: lightgray;
@@ -78,4 +79,9 @@ button.add-list-btn {
 
 form.new_list {
   display: block;
+}
+
+.ui-sortable-placeholder {
+  visibility: visible !important;
+  background-color: darken(#00BFFF, 20%);
 }
