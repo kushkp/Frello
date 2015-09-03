@@ -1,7 +1,7 @@
 # Frello
 
 [Live Demo][live_link]
-[live_link]: frello-app.herokuapp.com
+[live_link]: http://frello-app.herokuapp.com
 
 ## Description
 
